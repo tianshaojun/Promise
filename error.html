@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // try ... catch
+        // try {
+        //    let d;
+        //    console.log(d.xxx);
+        // } catch (error) {
+        //    console.log(error);
+        //    console.log(error.message);
+        //    console.log(error.stack);
+        // }
+        // console.log('出错之后');
+
+
+        // throw error
+        function something() {
+            // console.log(Date.now());  //返回1970年1月1日至今的毫秒数
+            if (Date.now() % 2 === 1) {
+                console.log('当前时间为奇数，可以执行任务');
+            } else {  // 如果时间是偶数抛出异常，由调用来处理
+                throw new Error('当前时间为偶数无法执行任务');
+            }
+        }
+
+        //捕获处理异常
+        try {
+            something();
+        } catch (error) {
+            console.log(error.message);
+        }
+
+    </script>
+</body>
+</html>
