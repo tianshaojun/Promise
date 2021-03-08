@@ -30,7 +30,25 @@
     + 1. 从语法上来说：Promise是一个构造函数
     + 2. 从功能上来说：Promise对象用来封装一个异步操作并可以获取其结果
 
-### 6.1111
+### 6.Promise的状态和状态改变
+
++ Promise的状态
+    + 1.pending
+    + 2.resolved
+    + 3.rejected
++ Promise的状态改变
+    + 1.pending变为resolved
+    + 2.pending变为rejected
+    + 3.说明：只有这两种，且一个Promise对象只能改变一次。无论变为成功还是失败，都会有一个结果数据。成功的结果数据一般称为value，失败的结果数据一般称为reason
+
+### 7.Promise的运行流程
+
+### 8.Promise的基本使用
+
+### 9.11111
+
+
+
 
 
 
