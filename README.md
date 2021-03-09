@@ -33,13 +33,13 @@
 ### 6.Promise的状态和状态改变
 
 + Promise的状态
-    + 1.pending
-    + 2.resolved
-    + 3.rejected
+    + pending
+    + resolved
+    + rejected
 + Promise的状态改变
-    + 1.pending变为resolved
-    + 2.pending变为rejected
-    + 3.说明：只有这两种，且一个Promise对象只能改变一次。无论变为成功还是失败，都会有一个结果数据。成功的结果数据一般称为value，失败的结果数据一般称为reason
+    + pending变为resolved
+    + pending变为rejected
+    + 说明：只有这两种，且一个Promise对象只能改变一次。无论变为成功还是失败，都会有一个结果数据。成功的结果数据一般称为value，失败的结果数据一般称为reason
 
 ### 7.Promise的运行流程
 
