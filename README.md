@@ -12,11 +12,11 @@
 
 ### 3. 常见的内置错误
 
-+ 1.Error：所有错误的父类型
-+ 2.ReferenceError：引用的变量不存在
-+ 3.TypeError：数据类型不正确的错误
-+ 4.RangeError：数据值不在其允许的范围内
-+ 5.SyntaxError：语法错误
++ 1. Error：所有错误的父类型
++ 2. ReferenceError：引用的变量不存在
++ 3. TypeError：数据类型不正确的错误
++ 4. RangeError：数据值不在其允许的范围内
++ 5. SyntaxError：语法错误
 
 ### 4.错误的处理(捕获与抛出)
 
