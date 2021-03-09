@@ -43,6 +43,8 @@
 
 ### 7.Promise的运行流程
 
+![](https://github.com/tianshaojun/Promise/blob/master/md_img/promise001.png)
+
 ### 8.Promise的基本使用
 
 ### 9.11111
