@@ -59,6 +59,20 @@
    + 解决方案？promise链式调用
    + 终极解决方案？async/await
 
+### 10.Promise的API说明
+
+### 11.Promise的API使用1
+
+### 12.Promise的API使用2
+
+
+
+
+
+
+
+
+
 
 
 

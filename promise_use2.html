@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 产生一个成功值为1的promise对象
+        const p1 = new Promise((resolve,reject) => {
+            // setTimeout(() => {
+              resolve(1);
+            // },100);
+        });
+        const p2 = Promise.resolve(2);
+        const p3 = Promise.reject(3);
+
+        // const pAll = Promise.all([p1,p2,p3]);
+        const pAll = Promise.all([p1,p2]);
+        pAll.then(
+            values => {
+                // console.log('all onResolved()', values);
+            },
+            reason => {
+                // console.log('all onRejected()', reason);
+            }
+        )
+
+        const pRace = Promise.race([p3,p1,p2]);
+        pRace.then(
+            value => {
+                console.log('race onResolved()', value);
+            },
+            reason => {
+                console.log('race onRejected', reason);
+            }
+        )
+    </script>
+</body>
+</html>
