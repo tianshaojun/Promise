@@ -63,7 +63,7 @@
 
 + Promise构造函数：Promise(excutor) {}
   + excutor函数：同步执行  (resolve, reject) => {}
-  + resolve函数: 内部定义成功时我们调用的函数  value => {}
+  + resolve函数：内部定义成功时我们调用的函数  value => {}
   + reject函数：内部定义失败时我们调用的函数   reason => {}
   + 说明：excutor会在Promise内部立即同步回调，异步操作在执行器中执行
 
