@@ -96,6 +96,44 @@
 
 ### 12.Promise的API使用2
 
+### 13.Promise的几个关键问题1
+ 
++ 如何改变promise的状态？
+  + resolve(value)：如果当前是pending就会变为resolved
+  + reject(reason)：如果当前是pending就会变为rejected
+  + 抛出异常：如果当前是pending就会变为rejected
+
+### 14.Promise的几个关键问题2
+
++ 一个promise指定多个成功/失败回调函数，都会调用吗？
+  + 当promise改变为对应状态时都会调用
+
+### 15.Promise的几个关键问题3
+
++ 改变promise状态和指定回调函数谁先谁后？
+  + 都有可能，正常情况下是先指定回调再改变状态，但也可以先改状态再指定回调
+  + 如何先改状态再指定回调？
+    + 在执行器中直接调用resolve()/reject()
+    + 延迟更长时间才调用then()
+  + 什么时候才能得到数据？
+    + 如果先指定的回调，那当状态发生改变时，回调函数就会调用，得到数据
+    + 如果先改变的状态，那当指定回调时，回调函数就会调用，得到数据
+
+### 16.Promise的几个关键问题4
+
++ promise.then()返回的新promise的结果状态由什么决定？
+  + 简单表达：由then()指定的回调函数执行的结果决定
+  + 详细表达：
+    + 如果抛出异常，新promise变为rejected，reason为抛出的异常
+    + 如果返回的是非promise的任意值，新promise变为resolved，value为返回的值
+    + 如果返回的是另一个新promise，此promise的结果就会成为新promise的结果
+  
+###  17.Promise的几个关键问题5
+
++ promise的then()返回一个新的promise，可以看成then()的链式调用
++ 通过then的链式调用串连多个同步/异步任务
+
+
 
 
 

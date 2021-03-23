@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const p = new Promise((resolve, reject) => {
+            // resolve(1);  // promise变为resolved成功状态
+            // reject(2);  //promise变为rejected失败状态
+            // throw new Error('出错了');  //抛出异常，promise变为rejected失败状态，reason为抛出的error
+            throw 3;  //抛出异常，promise变为rejected失败状态，reason为抛出的3
+        })
+        p.then(
+            value => { console.log('value', value) },
+            reason => { console.log('reason', reason) }
+        )
+    </script>
+</body>
+
+</html>
