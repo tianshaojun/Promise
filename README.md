@@ -18,19 +18,19 @@
 + RangeError：数据值不在其允许的范围内
 + SyntaxError：语法错误
 
-### 4.错误的处理(捕获与抛出)
+### 4. 错误的处理(捕获与抛出)
 
 + 捕获错误
 + 抛出错误
 
-### 5.Promise的理解
+### 5. Promise的理解
 
 + 抽象表达：Promise是JS中进行异步编程的新的解决方案
 + 具体表达
     + 从语法上来说：Promise是一个构造函数
     + 从功能上来说：Promise对象用来封装一个异步操作并可以获取其结果
 
-### 6.Promise的状态和状态改变
+### 6. Promise的状态和状态改变
 
 + Promise的状态
     + pending
@@ -41,15 +41,15 @@
     + pending变为rejected
     + 说明：只有这两种，且一个Promise对象只能改变一次。无论变为成功还是失败，都会有一个结果数据。成功的结果数据一般称为value，失败的结果数据一般称为reason
 
-### 7.Promise的运行流程
+### 7. Promise的运行流程
 
 ![](https://github.com/tianshaojun/Promise/blob/master/md_img/promise001.png)
 
-### 8.Promise的基本使用
+### 8. Promise的基本使用
 
 + promise_base.html
 
-### 9.为什么要使用Promise
+### 9. 为什么要使用Promise
 
 + 指定回调函数的方式更加灵活
    + 旧的：必须在启动异步任务前指定
@@ -59,7 +59,7 @@
    + 解决方案？promise链式调用
    + 终极解决方案？async/await
 
-### 10.Promise的API说明
+### 10. Promise的API说明
 
 + Promise构造函数：Promise(excutor) {}
   + excutor函数：同步执行  (resolve, reject) => {}
@@ -92,23 +92,23 @@
   + promises：包含n个promise的数组
   + 说明：返回一个新的promise，第一个完成的promise的结果状态就是最终的结果状态
 
-### 11.Promise的API使用1
+### 11. Promise的API使用1
 
-### 12.Promise的API使用2
+### 12. Promise的API使用2
 
-### 13.Promise的几个关键问题1
+### 13. Promise的几个关键问题1
  
 + 如何改变promise的状态？
   + resolve(value)：如果当前是pending就会变为resolved
   + reject(reason)：如果当前是pending就会变为rejected
   + 抛出异常：如果当前是pending就会变为rejected
 
-### 14.Promise的几个关键问题2
+### 14. Promise的几个关键问题2
 
 + 一个promise指定多个成功/失败回调函数，都会调用吗？
   + 当promise改变为对应状态时都会调用
 
-### 15.Promise的几个关键问题3
+### 15. Promise的几个关键问题3
 
 + 改变promise状态和指定回调函数谁先谁后？
   + 都有可能，正常情况下是先指定回调再改变状态，但也可以先改状态再指定回调
@@ -119,7 +119,7 @@
     + 如果先指定的回调，那当状态发生改变时，回调函数就会调用，得到数据
     + 如果先改变的状态，那当指定回调时，回调函数就会调用，得到数据
 
-### 16.Promise的几个关键问题4
+### 16. Promise的几个关键问题4
 
 + promise.then()返回的新promise的结果状态由什么决定？
   + 简单表达：由then()指定的回调函数执行的结果决定
@@ -128,7 +128,7 @@
     + 如果返回的是非promise的任意值，新promise变为resolved，value为返回的值
     + 如果返回的是另一个新promise，此promise的结果就会成为新promise的结果
   
-###  17.Promise的几个关键问题5
+###  17. Promise的几个关键问题5
 
 + promise的then()返回一个新的promise，可以看成then()的链式调用
 + 通过then的链式调用串连多个同步/异步任务
